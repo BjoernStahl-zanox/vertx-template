@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zanox.public.vertx</groupId>
@@ -29,7 +30,7 @@
         <vertx.version>2.1.2</vertx.version>
         <vertx.testtools.version>2.0.3-final</vertx.testtools.version>
         <junit.version>4.11</junit.version>
-        <jedis.version>2.6.0</jedis.version>>
+        <jedis.version>2.6.0</jedis.version>
         <slf4j.version>1.7.2</slf4j.version>
         <log4j2.version>2.0-beta9</log4j2.version>
         <yammer.metrics.core.version>2.2.0</yammer.metrics.core.version>

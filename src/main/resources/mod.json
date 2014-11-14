@@ -1,0 +1,7 @@
+{
+  // Java verticle
+  "main": "com.zanox.public.vertx.StarterVerticle",
+  "description": "Vert.x template project",
+  "author": "Björn Stahl - Zanox AG",
+  "homepage": "http://www.zanox.com"
+}
