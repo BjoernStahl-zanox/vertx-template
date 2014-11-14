@@ -2,11 +2,9 @@ package com.zanox.external.template.vertx.verticles;
 
 import com.zanox.external.template.vertx.constants.Constants;
 import com.zanox.external.template.vertx.utils.NetworkUtil;
-import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.EventBus;
 import org.vertx.java.core.http.HttpClient;
 import org.vertx.java.core.http.HttpClientRequest;
-import org.vertx.java.core.http.HttpClientResponse;
 import org.vertx.java.core.http.HttpServerRequest;
 import org.vertx.java.core.http.RouteMatcher;
 import org.vertx.java.core.json.JsonArray;
