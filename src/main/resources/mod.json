@@ -1,6 +1,6 @@
 {
   // Java verticle
-  "main": "com.zanox.public.vertx.StarterVerticle",
+  "main": "com.zanox.external.template.vertx.verticles.StarterVerticle",
   "description": "Vert.x template project",
   "author": "Björn Stahl - Zanox AG",
   "homepage": "http://www.zanox.com"

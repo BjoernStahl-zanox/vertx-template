@@ -7,5 +7,6 @@ packaging:
 # optional list of port to expose on the host
 ports:
   - 8080
+  - 9090
 
 tag: zanox/${project.artifactId}:${project.version}

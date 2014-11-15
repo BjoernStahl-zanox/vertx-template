@@ -32,7 +32,7 @@ public class AmazonUtil {
                 // URL is available only in AWS
                 // see: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html
 
-                URL url = new URL("http://my-AWS-IP-goes-Here/latest/meta-data/");
+                URL url = new URL("http://169.254.169.254/latest/meta-data/");
                 URLConnection connection = url.openConnection();
                 connection.setConnectTimeout(50);
                 in = new BufferedReader(new InputStreamReader(
