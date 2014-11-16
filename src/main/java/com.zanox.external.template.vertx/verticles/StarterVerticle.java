@@ -25,6 +25,9 @@ public class StarterVerticle extends Verticle {
         LOGGER.info(" ---> " + MonitoringVerticle.class.getName());
         container.deployVerticle(MonitoringVerticle.class.getName());
 
+        LOGGER.info(" ---> ScalaVerticle");
+        container.deployVerticle("scala:com.zanox.external.template.vertx.verticles.ScalaVerticle");
+
 
     }
 }

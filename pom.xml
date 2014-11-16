@@ -52,6 +52,8 @@
         <yammer.metrics.core.version>2.2.0</yammer.metrics.core.version>
         <yammer.metrics.graphite.version>2.2.0</yammer.metrics.graphite.version>
 
+        <scala.version>2.10.4</scala.version>
+
         <!--Plugin versions-->
         <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
         <maven.docker.plugin.version>2.1.0</maven.docker.plugin.version>
@@ -149,10 +151,65 @@
             <version>${vertx.testtools.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>lang-scala</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <!-- enable detailed feature warnings of the scala compiler by setting its command line parameter -feature -->
+                    <args>
+                        <arg>-feature</arg>
+                    </args>
+                    <javacArgs>
+                        <javacArg>-source</javacArg>
+                        <javacArg>1.8</javacArg>
+                        <javacArg>-target</javacArg>
+                        <javacArg>1.8</javacArg>
+                    </javacArgs>
+                    <recompileMode>incremental</recompileMode>
+                </configuration>
+                <!--
+                  The scala plugin detects the version of the scala library in the dependents and
+                  uses that version to compile the scala code
+                -->
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>scala-test-compile</id>
+                        <phase>process-test-resources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>com.alexecollins.docker</groupId>
