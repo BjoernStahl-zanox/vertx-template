@@ -8,6 +8,7 @@ public final class Constants {
     /* Non-instantiable class */
     private Constants() {}
 
+    public static final String TRACKING_BUS = "tracking.bus";
     public static final String ZXMONITOR_FILE = "/monitor/status.txt"; //physical location of the file
     public static final String ZXMONITOR_PATH = "/monitor/status.txt"; //http path
 
