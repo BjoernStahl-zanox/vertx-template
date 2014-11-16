@@ -56,7 +56,7 @@
 
         <!--Plugin versions-->
         <maven.compiler.plugin.version>3.0</maven.compiler.plugin.version>
-        <maven.docker.plugin.version>2.1.0</maven.docker.plugin.version>
+        <maven.docker.plugin.version>2.2.0</maven.docker.plugin.version>
         <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
         <maven.clean.plugin.version>2.5</maven.clean.plugin.version>
         <maven.vertx.plugin.version>2.0.8-final</maven.vertx.plugin.version>
@@ -217,7 +217,7 @@
                 <version>${maven.docker.plugin.version}</version>
                 <configuration>
                     <!-- your installed version -->
-                    <version>1.15</version>
+                    <version>1.20</version>
                     <removeIntermediateImages>true</removeIntermediateImages>
                     <!-- do/do not cache images (default true), disable to get the freshest images -->
                     <cache>true</cache>
